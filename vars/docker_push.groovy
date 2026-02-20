@@ -7,3 +7,4 @@ withCredentials([usernamePassword('credentialsId': "dockerhub_cred",
                 docker push ${env.dockerHubUser}/${image_name}:latest
                 """
 }
+}
