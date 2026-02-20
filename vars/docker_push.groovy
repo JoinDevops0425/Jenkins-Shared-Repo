@@ -4,6 +4,6 @@ withCredentials([usernamePassword('credentialsId': "dockerhub_cred",
                 usernameVariable: "dockerHubUser")]){
                 sh """
                 docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}
-                docker push ${env.dockerHubUser}/"${image_name}":latest
+                docker push ${env.dockerHubUser}/${image_name}:latest
                 """
 }
